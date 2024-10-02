@@ -117,7 +117,7 @@ img {
 	width: 520px;
 }
 #body div#background div div div h1 {
-	color: #eeb58c;
+	color: #0e6902;
 	font-size: 48px;
 	font-weight: normal;
 	line-height: 50px;
@@ -162,7 +162,7 @@ p a:hover {
 	margin: 0;
 }
 #body div#background div span {
-	color: #eeb58c;
+	color: #0e6902;
 	display: block;
 	float: right;
 	font-size: 48px;
@@ -213,7 +213,7 @@ p a:hover {
 	width: 592px;
 }
 #body div#section ul li div p {
-	color: #eeb58c;
+	color: #0e6902;
 	line-height: 30px;
 	margin: 0;
 	padding: 0 0 30px;
@@ -227,7 +227,7 @@ p a:hover {
 	text-align: justify;
 }
 #body div ul li div p a {
-	color: #EEB58C;
+	color: #0e6902;
 }
 #body div ul li div a.readmore {
 	color: #585758;
@@ -241,7 +241,7 @@ p a:hover {
 	color: #b4b3b4;
 }
 #footer ul li a:hover {
-	color: #b6834f;
+	color: #0e6902;
 }
 #body div {
 	margin: 0 auto;
@@ -375,7 +375,7 @@ p a:hover {
 	border: 0;
 }
 #footer ul li a {
-	color: #85603a;
+	color: #0e6902;
 	display: block;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 10px;
@@ -385,7 +385,7 @@ p a:hover {
 	text-decoration: none;
 }
 #footer p {
-	color: #85603a;
+	color: #0e6902;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	float: left;
