@@ -21,8 +21,6 @@ body {
 	font-weight: 400;
 	font-style: normal;
 }
-
-}
 a {
 	outline: none;
 }
@@ -62,7 +60,7 @@ img {
 #header div ul li.current a:hover,
 #header div ul li a:hover {
 	background: url(../images/menu-selected.png) no-repeat right center;
-	color: #424141;
+	color: #209D50;
 }
 #header div ul li a:hover {
 	background: none;
@@ -96,14 +94,16 @@ img {
 	width: 100%;
 }
 #body div#background {
-	background: #FFFFFF url(../images/bg-content.jpg) no-repeat center bottom;
-	min-height: 420px;
+	background: #FFFFFF url(../images/mountain2.png) no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh; /* Ensure it takes up the full viewport height */
+	margin: 0;
 	padding: 0;
-	width: auto;
 }
 #body div#background div {
 	margin: 0 auto;
-	overflow: hidden;
+	overflow: visible;
 	padding: 55px 0 80px;
 	width: 940px;
 }
@@ -117,7 +117,7 @@ img {
 	width: 520px;
 }
 #body div#background div div div h1 {
-	color: #0e6902;
+	color: #209D50;
 	font-size: 48px;
 	font-weight: normal;
 	line-height: 50px;
@@ -162,7 +162,7 @@ p a:hover {
 	margin: 0;
 }
 #body div#background div span {
-	color: #0e6902;
+	color: #209D50;
 	display: block;
 	float: right;
 	font-size: 48px;
@@ -173,9 +173,9 @@ p a:hover {
 	width: 320px;
 }
 #body div#section {
-	background: #0b080c;
+	background: transparent;
 	padding: 0;
-	width: 100%;
+	margin: 0;
 }
 #body div ul {
 	list-style: none;
@@ -213,7 +213,7 @@ p a:hover {
 	width: 592px;
 }
 #body div#section ul li div p {
-	color: #0e6902;
+	color: #209D50;
 	line-height: 30px;
 	margin: 0;
 	padding: 0 0 30px;
@@ -227,10 +227,10 @@ p a:hover {
 	text-align: justify;
 }
 #body div ul li div p a {
-	color: #0e6902;
+	color: #209D50;
 }
 #body div ul li div a.readmore {
-	color: #585758;
+	color: #E1DFD9;
 	display: inline-block;
 	font-size: 12px;
 	font-style: italic;
@@ -241,7 +241,7 @@ p a:hover {
 	color: #b4b3b4;
 }
 #footer ul li a:hover {
-	color: #0e6902;
+	color: #209D50;
 }
 #body div {
 	margin: 0 auto;
@@ -249,7 +249,7 @@ p a:hover {
 	width: 940px;
 }
 #body div div.blog {
-	color: #585758;
+	color: #E1DFD9;
 	font-size: 12px;
 	line-height: 22px;
 	margin: 0;
@@ -257,7 +257,7 @@ p a:hover {
 	width: auto;
 }
 #body div div.blog a {
-	color: #585758;
+	color: #E1DFD9;
 	text-decoration: none;
 }
 #body div div.blog a:hover,
@@ -299,7 +299,7 @@ p a:hover {
 	color: #ffffff;
 }
 #body div div#content div a.back {
-	color: #585758;
+	color: #E1DFD9;
 	display: block;
 	font-size: 12px;
 	font-style: italic;
@@ -375,7 +375,7 @@ p a:hover {
 	border: 0;
 }
 #footer ul li a {
-	color: #0e6902;
+	color: #209D50;
 	display: block;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 10px;
@@ -385,7 +385,7 @@ p a:hover {
 	text-decoration: none;
 }
 #footer p {
-	color: #0e6902;
+	color: #209D50;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	float: left;
