@@ -1,11 +1,13 @@
 @ -1,431 +1,7 @@
 /* Website template by freewebsitetemplates.com */
 body {
-	background-image: url(mountain2.png);
+	background-image: url(../images/black_white_mountain.png);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+	height: 100vh;
+	margin: 0;
 }
 
 body{
@@ -17,12 +19,6 @@ body{
 	min-width: 940px;
 	padding: 0;
 }
-{
-	font-family: 'Baskervville SC';
-	font-weight: 400;
-	font-style: normal;
-}
-
 .baskervville-sc-regular {
 	font-family: "Baskervville SC", serif;
 	font-weight: 400;
@@ -43,28 +39,35 @@ img {
 	z-index: 2;
 }
 
+/*This below ensures the Home, About are where they are*/
 #header div {
 	margin: 0 auto;
 	width: 940px;
+	height: 300px auto;
 }
 #header div a.logo {
-	background: url(../images/AMG_logo2.png) no-repeat center top;
-	display: block;
-	height: 300px;
+	background: url(../images/AMG_3.png) no-repeat center top;
+	display:block;
+	height: 350px;
 	text-indent: -99999px;
 }
+/*This below will add a dot next to the Home and About if you remove it*/
 #header div ul {
 	list-style: none;
-	margin: 0;
+	margin: 20px;
 	overflow: hidden;
 	padding: 0;
 }
+
+/*This below is the Home, About*/
 #header div ul li {
 	float: left;
 	margin: 0 0 0 0;
 	position: relative;
 	width: 235px;
 }
+
+/*This below is the pointer */
 #header div ul li.current a,
 #header div ul li.current a:hover,
 #header div ul li a:hover {
@@ -74,18 +77,22 @@ img {
 #header div ul li a:hover {
 	background: none;
 }
+
+/*This below is the Home, About */
 #header div ul li a {
 	background: none;
-	color: #a3a3a3;
+	color: #E1DFD9;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 16px;
 	height: 54px;
 	line-height: 54px;
 	padding: 0;
 	text-decoration: none;
 	text-transform: uppercase;
-	text-shadow: 0 1px #ffffff;
+	text-shadow: 0 1px #1D231C;
 }
+
+/*This below affects where the pointer is next to Home, About*/
 #header div ul li a.home {
 	padding: 0 28px 0 10px;
 }
@@ -93,11 +100,10 @@ img {
 	padding: 0 28px 0 55px;
 }
 
-
 #body div#background {
-	background: #FFFFFF url(../images/mountain2.png) no-repeat center bottom;
+	background: url(../images/black_white_mountain.png) no-repeat center;
 	background-size: cover;
-	background-image: url(mountain2.png)
+	background-image: url(../images/black_white_mountain.png) no-repeat center;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -105,6 +111,7 @@ img {
 	margin: 0;
 	padding: 0;
 }
+
 #body div#background div {
 	margin: 0 auto;
 	overflow: visible;
