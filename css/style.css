@@ -28,23 +28,14 @@ body {
 	color: #ffffff; /* Text color */
 }
 
-#black-section, #footer {
-	padding: 20px; /* Space inside the section */
-	width: 100%; /* Full width */
-	margin: 0; /* Remove margin */
-}
 
-#footer {
-	min-height: 85px; /* Adjust as necessary */
-	text-align: center; /* Center footer text */
-	position: relative; /* Position relative to the document flow */
-	bottom: 0; /* Stick to the bottom */
-}
-
-	min-height: 100vh; /* Maintain full viewport height */
+/*Removing this below, makes it look like Home, but changes the small footer part */ 
+min-height: 100vh; /* Maintain full viewport height */
 	margin-top: 60px; /* Adjust this value to move the splash screen lower */
 	margin-bottom: 40px; /* Space below the section */
 
+
+	
 
 ul {
     list-style-type: none; /* Remove default bullet points */
