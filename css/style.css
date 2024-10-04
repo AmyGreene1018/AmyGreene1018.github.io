@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	box-sizing: content-box; /* Include padding and border in the element's total width and height */
 }
 
 body {
@@ -100,7 +100,7 @@ p {
 
 body {
 	background: #0b080c;
-	color: #ffffff;
+	color: #E1DFD9;
 	font-family: 'QuestrialRegular', sans-serif; /* Added fallback font */
 	font-size: 16px;
 	margin: 0;
@@ -155,7 +155,7 @@ img {
 /*This below is the Home, About*/
 #header div ul li {
 	float: left;
-	margin: 0 0 0 0;
+	margin: 10px 
 	position: relative;
 	width: 235px;
 }
@@ -171,7 +171,7 @@ img {
 
 #header div ul li a {
     background: none;
-    color: #E1DFD9;
+    color: #1d231c;
     display: inline-block;
     font-size: 16px;
     height: 54px;
@@ -228,7 +228,7 @@ img {
 }
 
 #body div#background div p {
-	color: #bebebe;
+	color: #1D231C;
 	line-height: 30px;
 	margin: 15px 0 0;
 	text-align: justify;
@@ -236,7 +236,7 @@ img {
 
 /* Anchor Color Styling */
 p a {
-	color: #bebebe; /* Normal link color */
+	color: #209D50; /* Normal link color */
 }
 
 a:hover {
@@ -251,7 +251,7 @@ a:hover {
 }
 
 #body div#background div div.about h3 {
-	color: #bebebe;
+	color: #209D50;
 	font-size: 20px;
 	font-style: italic;
 	font-weight: normal;
@@ -353,7 +353,7 @@ a:hover {
 }
 
 #body div ul li div a.readmore {
-	color: #E1DFD9; /* Color for "Read More" links */
+	color: #1D231C; /* Color for "Read More" links */
 	display: inline-block; /* Makes it inline-block */
 	font-size: 12px; /* Font size */
 	font-style: italic; /* Italic font */
@@ -371,13 +371,13 @@ a:hover {
 
 #body div {
 	margin: 0 auto; /* Centers the div */
-	padding: 40px 0 80px; /* Vertical padding */
-	width: 940px; /* Fixed width */
+	padding: 20px 0 20px; /* Vertical padding */
+	max-width: 940px;
 }
 
 #body div div.blog {
 	color: #E1DFD9; /* Text color for the blog section */
-	font-size: 12px; /* Font size */
+	font-size: 24px; /* Font size */
 	line-height: 22px; /* Line height */
 	margin: 0; /* No margin */
 	padding: 0; /* No padding */
