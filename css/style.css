@@ -1,43 +1,145 @@
-@ -1,431 +1,7 @@
-/* Website template by freewebsitetemplates.com */
+* {
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 body {
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	font-family: 'QuestrialRegular', sans-serif; /* Set your font */
+	min-width: 940px; /* Set minimum width */
+}
+
+#mountain {
 	background-image: url(../images/black_white_mountain.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-	height: 100vh;
+	background-repeat: no-repeat; /* Prevents the image from repeating */
+	background-position: center center; /* Centers the image in the div */
+	background-attachment: fixed; /* Fixes the background image in place during scrolling */
+	background-size: cover; /* Scales the image to cover the entire area of the div */
+	height: 100vh; /* Sets the height to 100% of the viewport height */
+	margin: 0; /* Removes any default margin */
+	width: 100%; /* Sets the width to 100% of the parent container */
+}
+
+.black-background {
+	background: #0b080c; /* The color of your black section */
+}
+
+.white-text {
+	color: #ffffff; /* Text color */
+}
+
+#black-section, #footer {
+	padding: 20px; /* Space inside the section */
+	width: 100%; /* Full width */
+	margin: 0; /* Remove margin */
+}
+
+#footer {
+	min-height: 85px; /* Adjust as necessary */
+	text-align: center; /* Center footer text */
+	position: relative; /* Position relative to the document flow */
+	bottom: 0; /* Stick to the bottom */
+}
+
+	min-height: 100vh; /* Maintain full viewport height */
+	margin-top: 60px; /* Adjust this value to move the splash screen lower */
+	margin-bottom: 40px; /* Space below the section */
+
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Space items evenly */
+}
+
+li {
+    flex: 1 1 300px; /* Make items flexible with a base width */
+    margin: 10px; /* Add margin around items */
+}
+
+img {
+    max-width: 100%; /* Ensure images scale with their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+p {
+    line-height: 1.5; /* Improve readability */
+    margin: 10px 0; /* Add space above and below paragraphs */
+}
+
+.readmore {
+    display: inline-block; /* Allow padding and margin */
+    margin-top: 10px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: #E1DFD9; /* Change text color to blue (or any color you prefer) */
+}
+
+.readmore:hover {
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
+}
+
+/*This fixed the splashscreen to be in the right place*/
+#section {
+	background: transparent;
+	padding: 0;
 	margin: 0;
 }
 
-body{
+
+#body div ul li a img {
+    display: block;
+    float: left;
+    opacity: 1; /* Removed IE filter for modern browsers */
+}
+
+
+
+
+/*Below affects the Splashscreen size*/
+#body div ul li div {
+	float: right;
+	padding: 0;
+	width: 592px;
+}
+
+
+
+body {
 	background: #0b080c;
 	color: #ffffff;
-	font-family: 'QuestrialRegular';
+	font-family: 'QuestrialRegular', sans-serif; /* Added fallback font */
 	font-size: 16px;
 	margin: 0;
 	min-width: 940px;
 	padding: 0;
 }
+
 .baskervville-sc-regular {
-	font-family: "Baskervville SC", serif;
-	font-weight: 400;
-	font-style: normal;
-}
-a {
-	outline: none;
-}
-img {
-	border: 0;
+	font-family: "Baskervville SC", serif; /* Consider defining a fallback font */
+	font-weight: 400; /* Default weight, can be omitted if not necessary */
+	font-style: normal; /* This can be omitted as normal is the default */
 }
 
-#header { /*the top part with my logo */
+a {
+	outline: none; /* Consider removing for better accessibility */
+}
+
+img {
+	border: 0; /* Use border: none; for clarity */
+}
+
+/* Header Styles */
+#header {
 	background: url(../images/bg-gray.png) repeat-x left top;
 	height: 360px;
 	position: relative;
 	width: 100%;
-	z-index: 2;
+	z-index: 2; /* Consider using a semantic naming convention if needed */
 }
+
 
 /*This below ensures the Home, About are where they are*/
 #header div {
@@ -67,46 +169,42 @@ img {
 	width: 235px;
 }
 
-/*This below is the pointer */
+
+
+/* This below is the pointer */
 #header div ul li.current a,
-#header div ul li.current a:hover,
 #header div ul li a:hover {
-	background: url(../images/menu-selected.png) no-repeat right center;
-	color: #209D50;
-}
-#header div ul li a:hover {
-	background: none;
+    background: url(../images/menu-selected.png) no-repeat right center;
+    color: #209D50;
 }
 
-/*This below is the Home, About */
 #header div ul li a {
-	background: none;
-	color: #E1DFD9;
-	display: inline-block;
-	font-size: 16px;
-	height: 54px;
-	line-height: 54px;
-	padding: 0;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-shadow: 0 1px #1D231C;
+    background: none;
+    color: #E1DFD9;
+    display: inline-block;
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 1px #1D231C;
 }
 
-/*This below affects where the pointer is next to Home, About*/
+/* This below affects where the pointer is next to Home, About */
 #header div ul li a.home {
-	padding: 0 28px 0 10px;
+    padding: 0 28px 0 55px;
 }
 #header div ul li a.about {
-	padding: 0 28px 0 55px;
+    padding: 0 28px 0 55px;
 }
 
-#body div#background {
-	background: url(../images/black_white_mountain.png) no-repeat center;
-	background-size: cover;
-	background-image: url(../images/black_white_mountain.png) no-repeat center;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
+
+/*Below changes the about, now the mountain is in the middle*/
+
+#body {
+	background: url(../images/black_white_mountain.png) no-repeat center center;
+	background-size: cover; /* Ensures the image covers the entire area */
 	min-height: 100vh; /* Ensure it takes up the full viewport height */
 	margin: 0;
 	padding: 0;
@@ -118,15 +216,18 @@ img {
 	padding: 55px 0 80px;
 	width: 940px;
 }
+
 #body div#background div div {
 	margin: 0;
 	padding: 0;
 	width: 570px;
 }
+
 #body div#background div div div {
 	padding: 61px 0 0 20px;
 	width: 520px;
 }
+
 #body div#background div div div h1 {
 	color: #209D50;
 	font-size: 48px;
@@ -134,181 +235,213 @@ img {
 	line-height: 50px;
 	margin: 0;
 }
+
 #body div#background div p {
 	color: #bebebe;
 	line-height: 30px;
 	margin: 15px 0 0;
 	text-align: justify;
 }
+
+/* Anchor Color Styling */
 p a {
-	color: #bebebe;
+	color: #bebebe; /* Normal link color */
 }
-p a:hover {
-	color: #6e6c6c;
+
+a:hover {
+	color: #6e6c6c; /* Hover color for all links */
+	text-decoration: underline; /* Underline on hover for all links */
 }
-#body div#background div div div p a:hover,
-#body div#section ul li div p a:hover,
-#body div div#content div p a:hover {
-	text-decoration: underline;
-}
+
+/* About Section Styling */
 #body div#background div div.about {
-	float: left;
+	float: left; /* Consider using flexbox for layout */
 	padding: 0;
 }
+
 #body div#background div div.about h3 {
 	color: #bebebe;
-	font-size: 16px;
+	font-size: 20px;
 	font-style: italic;
 	font-weight: normal;
 	line-height: 24px;
 	margin: 34px 0 0;
-	text-transform: uppercase;
+	text-transform: uppercase; /* Uppercase text */
 }
+
 #body div#background div div.about h3:first-child {
-	margin: 0;
+	margin: 0; /* Removes margin for the first <h3> in .about */
 }
+
+
+/*Below is the About Text*/
 #body div#background div div.about p {
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 24px;
-	margin: 0;
+	margin: 0; /* No margin */
 }
+
+/* Span Styling */
 #body div#background div span {
 	color: #209D50;
-	display: block;
-	float: right;
+	display: block; /* Consider if block display is necessary */
+	float: right; /* Consider using flexbox for layout */
 	font-size: 48px;
 	font-weight: normal;
 	line-height: 48px;
-	margin: 8px 0 0;
+	margin: 8px 0 0; /* Top margin */
 	text-align: center;
-	width: 320px;
+	width: 320px; /* Sets a width */
 }
+
 #body div#section {
-	background: transparent;
-	padding: 0;
-	margin: 0;
+	background: transparent; /* Transparent background */
+	padding: 0; /* No padding */
+	margin: 0; /* No margin */
 }
+
 #body div ul {
-	list-style: none;
-	margin: 0 auto;
-	min-height: 400px;
-	padding: 0 0 42px;
-	width: 940px;
+	list-style: none; /* No list style */
+	margin: 0 auto; /* Centered */
+	min-height: 400px; /* Minimum height */
+	padding: 0 0 42px; /* Bottom padding */
+	width: 940px; /* Fixed width */
 }
+
 #body div ul li {
-	display: block;
-	height: 180px;
-	overflow: visible;
-	padding: 24px 0 0;
+	display: block; /* Block display */
+	height: 180px; /* Fixed height */
+	overflow: visible; /* Visible overflow */
+	padding: 24px 0 0; /* Top padding */
 }
+
 #body div ul li:first-child {
-	padding: 66px 0 0;
+	padding: 66px 0 0; /* Top padding for the first item */
 }
+
 #body div#section ul li:first-child {
-	padding: 36px 0 0;
+	padding: 36px 0 0; /* Top padding for the first item in #section */
 }
+
 #body div ul li a img {
-	
-	display: block;
-	float: left;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
-	opacity: 1;
+	display: block; /* Block element */
+	float: left; /* Float left */
+	filter: alpha(opacity=100); /* IE8 support */
+	opacity: 1; /* Fully opaque */
 }
+
 #body div ul li a img:hover {
-	filter: alpha(opacity=90);/* Needed for IE8 and old versions */
-	opacity: 0.9;
+	filter: alpha(opacity=90); /* IE8 support */
+	opacity: 0.9; /* Reduce opacity on hover */
 }
+
 #body div ul li div {
-	float: right;
-	padding: 0;
-	width: 592px;
+	float: right; /* Floats the div to the right */
+	padding: 0; /* No padding */
+	width: 592px; /* Fixed width */
 }
+
 #body div#section ul li div p {
-	color: #209D50;
-	line-height: 30px;
-	margin: 0;
-	padding: 0 0 30px;
-	text-align: justify;
+	color: #209D50; /* Color for section paragraphs */
+	line-height: 30px; /* Line height */
+	margin: 0; /* No margin */
+	padding: 0 0 30px; /* Bottom padding */
+	text-align: justify; /* Justified text */
 }
+
 #body div ul li div p {
-	color: #fff;
-	line-height: 30px;
-	margin: 0;
-	padding: 0 0 30px;
-	text-align: justify;
+	color: #fff; /* Color for general paragraphs */
+	line-height: 30px; /* Line height */
+	margin: 0; /* No margin */
+	padding: 0 0 30px; /* Bottom padding */
+	text-align: justify; /* Justified text */
 }
+
 #body div ul li div p a {
-	color: #209D50;
+	color: #209D50; /* Color for links in paragraphs */
 }
+
 #body div ul li div a.readmore {
-	color: #E1DFD9;
-	display: inline-block;
-	font-size: 12px;
-	font-style: italic;
-	line-height: 22px;
-	text-decoration: none;
+	color: #E1DFD9; /* Color for "Read More" links */
+	display: inline-block; /* Makes it inline-block */
+	font-size: 12px; /* Font size */
+	font-style: italic; /* Italic font */
+	line-height: 22px; /* Line height */
+	text-decoration: none; /* No underline */
 }
+
 #body div ul li div a.readmore:hover {
-	color: #b4b3b4;
+	color: #b4b3b4; /* Change color on hover */
 }
+
 #footer ul li a:hover {
-	color: #209D50;
+	color: #209D50; /* Change color on hover */
 }
+
 #body div {
-	margin: 0 auto;
-	padding: 40px 0 80px;
-	width: 940px;
+	margin: 0 auto; /* Centers the div */
+	padding: 40px 0 80px; /* Vertical padding */
+	width: 940px; /* Fixed width */
 }
+
 #body div div.blog {
-	color: #E1DFD9;
-	font-size: 12px;
-	line-height: 22px;
-	margin: 0;
-	padding: 0;
-	width: auto;
+	color: #E1DFD9; /* Text color for the blog section */
+	font-size: 12px; /* Font size */
+	line-height: 22px; /* Line height */
+	margin: 0; /* No margin */
+	padding: 0; /* No padding */
 }
+
 #body div div.blog a {
-	color: #E1DFD9;
-	text-decoration: none;
+	color: #E1DFD9; /* Link color */
+	text-decoration: none; /* No underline for links */
 }
+
 #body div div.blog a:hover,
 #body div div#content div a.back:hover {
-	color: #838282;
+	color: #838282; /* Color on hover */
 }
+
 #body div div#content {
-	margin: 45px 0 0;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
+	margin: 45px 0 0; /* Margin for spacing */
+	overflow: hidden; /* Hides overflowing content */
+	padding: 0; /* No padding */
 }
+
 #body div div#content div:first-child {
-	float: left;
-	width: 282px;
+	float: left; /* Floats the first child div left */
+	width: 282px; /* Fixed width */
 }
+
 #body div div#content div:first-child a img {
-	border: 3px solid #F2F1E6;
-	display: block;
-	margin: 0 0 37px;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
-	opacity: 1;
+	border: 3px solid #F2F1E6; /* Border for the image */
+	display: block; /* Displays as a block */
+	margin: 0 0 37px; /* Margin below the image */
+	/* filter: alpha(opacity=100); */ /* Needed for IE8 and old versions, remove if not necessary */
+	opacity: 1; /* Fully opaque */
 }
+
 #body div div#content div:first-child a img:hover {
-	filter: alpha(opacity=90);/* Needed for IE8 and old versions */
-	opacity: 0.9;
+	filter: alpha(opacity=90); /* Needed for IE8 and old versions */
+	opacity: 0.9; /* Consistent hover effect for images */
 }
+
 #body div div#content div {
 	float: right;
-	padding: 0;
+	padding: 0; 
 	width: 595px; 
 }
+
 #body div div#content div p {
 	line-height: 30px;
 	margin: 0 0 45px;
 	text-align: justify;
 }
+
 #body div div#content div p a {
-	color: #ffffff;
+	color: #ffffff; /* Consider using a variable or a defined color if used elsewhere */
 }
+
 #body div div#content div a.back {
 	color: #E1DFD9;
 	display: block;
@@ -317,6 +450,7 @@ p a:hover {
 	line-height: 22px;
 	text-decoration: none;
 }
+
 #body div div#paging {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -326,65 +460,70 @@ p a:hover {
 	text-align: center;
 	width: 940px;
 }
+
 #body div div#paging span {
-	display: inline;
-	height: auto;
+	display: inline; /* Consider if this is necessary */
 	margin: 0;
-	width: auto;
 }
+
 #body div div#paging span a,
 #body div div#paging ul li a {
 	color: #727272;
-	display: inline;
+	display: inline; /* Could be redundant */
 	text-decoration: none;
-	text-shadow: 0 1px #e4e3e3;
+	text-shadow: 0 1px #e4e3e3; /* Consider if this is still necessary for your design */
 }
+
 #body div div#paging ul li a:hover,
 #body div div#paging span a:hover {
 	color: #949393;
 }
+
 #body div div#paging ul {
-	display: inline;
-	min-height: 0;
-	padding: 0;
-	width: auto;
+	padding: 0; /* Removed unnecessary display */
 }
+
 #body div div#paging ul li {
 	display: inline;
-	padding: 0 5px;
+	padding: 0 5px; /* Consider using margin for spacing instead for consistency */
 }
+
 #footer {
 	margin: 0 auto;
 	min-height: 85px;
 	overflow: hidden;
 	width: 940px;
 }
+
 #footer div.logo {
 	float: left;
-	padding: 27px 0 0;
-	width: 220px;
+	padding: 27px 0 0; /* Top padding for spacing */
+	width: 220px; /* Fixed width for logo */
 }
+
 #footer div.logo a img {
 	display: block;
-	height: 50px;
-	width: 50px;
+	height: 50px; /* Fixed height for logo image */
+	width: 50px;  /* Fixed width for logo image */
 }
+
 #footer ul {
 	float: left;
-	list-style: none;
-	margin: 3px 0 0;
-	overflow: hidden;
-	padding: 33px 0 0;
-	width: 220px;
+	list-style: none; /* Remove default list styling */
+	margin: 3px 0 0; /* Top margin for spacing */
+	padding: 33px 0 0; /* Top padding for spacing */
+	width: 220px; /* Fixed width for footer links */
 }
+
 #footer ul li {
-	border-left: 1px solid #85603a;
-	float: left;
-	height: 10px; 
+	border-left: 1px solid #85603a; /* Left border for separation */
+	float: left; /* Align list items horizontally */
 }
+
 #footer ul li:first-child {
-	border: 0;
+	border-left: none; /* Remove border for the first item */
 }
+
 #footer ul li a {
 	color: #209D50;
 	display: block;
@@ -418,26 +557,42 @@ p a:hover {
 	margin: 0 0 0 45px;
 	text-indent: -99999px;
 }
+/* Common styles for social media links */
+#footer div#connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block; /* Ensure full clickable area */
+	margin: 0; /* Reset margin */
+}
+
+/* Specific styles for each social media icon */
 #footer div#connect a#facebook {
-	background: url(../images/icons.png) no-repeat 0 0;
-	margin: 0;
-	width: 25px;
+	width: 25px; /* Set width for Facebook icon */
+	height: 25px; /* Added height for consistency */
+	background-position: 0 0; /* Default position for Facebook */
 }
+
 #footer div#connect a#twitter {
-	background: url(../images/icons.png) no-repeat 0 -35px;
-	width: 36px;
+	width: 36px; /* Width for Twitter icon */
+	height: 36px; /* Added height for consistency */
+	background-position: 0 -35px; /* Default position for Twitter */
 }
+
 #footer div#connect a#googleplus {
-	background: url(../images/icons.png) no-repeat 0 -95px;
-	width: 25px;
+	width: 25px; /* Width for Google Plus icon */
+	height: 25px; /* Added height for consistency */
+	background-position: 0 -95px; /* Default position for Google Plus */
 }
+
+/* Hover effects for each social media icon */
 #footer div#connect a#facebook:hover {
-	background: url(../images/icons.png) no-repeat -25px 0;
+	background-position: -25px 0; /* Hover position for Facebook */
 }
+
 #footer div#connect a#twitter:hover {
-	background: url(../images/icons.png) no-repeat 0 -60px;
+	background-position: 0 -60px; /* Hover position for Twitter */
 }
+
 #footer div#connect a#googleplus:hover {
-	background: url(../images/icons.png) no-repeat -25px -95px;
-	background-size: cover;
+	background-position: -25px -95px; /* Hover position for Google Plus */
+	background-size: cover; /* Ensure background size covers icon */
 }
